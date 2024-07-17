@@ -1,0 +1,6 @@
+paths:
+  /read-file:
+    get:
+      parameters:
+        - name: file_path
+          example: added in YAML

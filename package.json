@@ -1,0 +1,16 @@
+{
+  "name": "smart-actions-fs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "_actions.js",
+  "scripts": {
+    "test": "npx ava --verbose"
+  },
+  "author": "Brian Joseph Petro",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "ava": "^6.1.3"
+  }
+}
+

@@ -1,0 +1,14 @@
+{
+  "paths": {
+    "/read-file": {
+      "get": {
+        "parameters": [
+          {
+            "name": "file_path",
+            "description": "The file to read (changed in JSON)"
+          }
+        ]
+      }
+    }
+  }
+}
