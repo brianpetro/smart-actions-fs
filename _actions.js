@@ -9,9 +9,13 @@ import * as list_files from './actions/list_files.js';
 import * as list_folders from './actions/list_folders.js';
 import * as read_file from './actions/read_file.js';
 
-const group_name = 'fs'
+const group_name = 'fs';
+const group_dir = 'fs';
+const repo_url = 'https://github.com/brianpetro/smart-actions-fs';
 export default {
   group_name,
+  group_dir,
+  repo_url,
   _components,
   create_file,
   list_files,
