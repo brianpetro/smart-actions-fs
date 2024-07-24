@@ -36,7 +36,7 @@ const openapi = {
   "paths": {
     "/list-files": {
       "get": {
-        "summary": "List all files",
+        "description": "List all files in a folder",
         "operationId": "list_files",
         "parameters": [
           {

@@ -56,8 +56,8 @@ const openapi = {
   "paths": {
     "/create-file": {
       "post": {
-        "summary": "Create a file",
         "operationId": "create_file",
+        "description": "Create a file",
         "requestBody": {
           "required": true,
           "content": {

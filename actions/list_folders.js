@@ -41,7 +41,7 @@ const openapi = {
   "paths": {
     "/list-folders": {
       "get": {
-        "summary": "List all folders",
+        "description": "List all folders",
         "operationId": "list_folders",
         "parameters": [
           {

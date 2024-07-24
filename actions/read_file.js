@@ -70,8 +70,7 @@ const openapi = {
     "/read-file": {
       "get": {
         "operationId": "read_file",
-        "summary": "Read a file",
-        "description": "Read a file from the vault",
+        "description": "Read a file",
         "parameters": [
           {
             "name": "file_path",
