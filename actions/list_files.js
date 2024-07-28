@@ -22,7 +22,7 @@
  *                 type: string
  */
 async function list_files(env, params) {
-  const { folder_path } = params;
+  const { folder_path = '' } = params;
   const fs = env.fs;
   const files = await fs.readdir(folder_path);
   return { files };
