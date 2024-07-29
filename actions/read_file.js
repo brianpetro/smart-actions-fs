@@ -33,6 +33,7 @@
  */
 async function read_file(env, params) {
   const file_path = params.file_path;
+  if(!file_path) return {error: 'file_path is required'};
   const file_type = file_path.split('.').pop();
   // console.log({file_type});
   try {
