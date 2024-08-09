@@ -69,20 +69,26 @@ const openapi = {
   "openapi": "3.0.0",
   "paths": {
     "/read-file": {
-      "get": {
+      "post": {
         "operationId": "read_file",
         "description": "Read a file",
-        "parameters": [
-          {
-            "name": "file_path",
-            "in": "query",
-            "required": true,
-            "description": "The file to read",
-            "schema": {
-              "type": "string"
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file_path": {
+                    "type": "string",
+                    "description": "The file to read"
+                  }
+                },
+                "required": ["file_path"]
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "The file",
