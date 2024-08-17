@@ -24,7 +24,7 @@
 async function list_files(env, params) {
   const { folder_path = '' } = params;
   const fs = env.fs;
-  const files = await fs.readdir(folder_path);
+  const files = await fs.list(folder_path);
   return { files };
 }
 // exports.list_files = list_files; // standard export

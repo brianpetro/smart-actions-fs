@@ -41,7 +41,7 @@ async function create_file(env, params) {
   const file_path = params.file_path;
   const content = params.content;
   try {
-    await env.fs.writeFile(file_path, content);
+    await env.fs.write(file_path, content);
   } catch (error) {
     return { error: error.message };
   }

@@ -29,8 +29,7 @@
 async function list_folders(env, params) {
   const { folder_path = '/' } = params;
   const fs = env.fs;
-  const files = await fs.readdir(folder_path);
-  const folders = files.filter((file) => fs.statSync(file).isDirectory());
+  const folders = await fs.list_folders(folder_path);
   return { folders };
 }
 // exports.list_folders = list_folders; // standard export
