@@ -37,7 +37,7 @@
  *       500:
  *         description: Internal server error
  */
-async function create_file(env, params) {
+async function create_file({env, ...params}) {
   const file_path = params.file_path;
   const content = params.content;
   try {

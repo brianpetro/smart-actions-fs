@@ -21,7 +21,7 @@
  *               items:
  *                 type: string
  */
-async function list_files(env, params) {
+async function list_files({env, ...params}) {
   const { folder_path = '' } = params;
   const fs = env.fs;
   const files = await fs.list(folder_path);
