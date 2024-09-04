@@ -126,3 +126,4 @@ export {
   openapi,
   read_file
 };
+export default read_file;

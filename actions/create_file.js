@@ -104,3 +104,4 @@ export {
   openapi,
   create_file
 };
+export default create_file;

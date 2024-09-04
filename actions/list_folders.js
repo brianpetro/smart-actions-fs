@@ -82,3 +82,4 @@ export {
   list_folders,
   openapi,
 };
+export default list_folders;
