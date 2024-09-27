@@ -45,10 +45,10 @@ async function read_file({env, ...params}) {
       const file_name = file_path.split('/').pop();
       resp.name = file_name;
       resp.mime_type = 'application/pdf';
-      resp.content = await env.fs.read(file_path, 'base64');
+      resp.content = await params.fs.read(file_path, 'base64');
     }else{
-      // resp.content = (await env.fs.readFile(file_path)).toString();
-      resp.content = await env.fs.read(file_path, 'utf-8');
+      // resp.content = (await params.fs.readFile(file_path)).toString();
+      resp.content = await params.fs.read(file_path, 'utf-8');
     }
     // console.log(content); // ChatGPT can read this buffer, cool!
     return resp;

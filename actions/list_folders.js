@@ -28,7 +28,7 @@
  */
 async function list_folders({env, ...params}) {
   const { folder_path = '/' } = params;
-  const fs = env.fs;
+  const fs = params.fs;
   const folders = await fs.list_folders(folder_path);
   return { folders };
 }
