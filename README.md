@@ -1,3 +1,6 @@
+NOTE: 2025-05-17: Only used for components in sc-dektop: TODO: DEPRECATE, remove and archive
+
+
 # Smart Actions FS
 
 Smart Actions FS is a library that offers file system operations as smart actions. These actions can be integrated into projects to handle file and folder operations like in Smart Connect.
