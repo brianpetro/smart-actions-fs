@@ -42,6 +42,11 @@ async function create_file({env, ...params}) {
   const content = params.content;
   try {
     await params.fs.write(file_path, content);
+    if (typeof params.fs?.include_file === 'function') {
+      params.fs.include_file(file_path);
+    } else if (typeof env?.smart_fs?.include_file === 'function') {
+      env.smart_fs.include_file(file_path);
+    }
   } catch (error) {
     return { error: error.message };
   }
