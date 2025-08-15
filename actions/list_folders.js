@@ -26,11 +26,17 @@
  *                     description: The folder name
  *                     example: /folder1
  */
-async function list_folders({env, ...params}) {
-  const { folder_path = '/' } = params;
-  const fs = params.fs;
-  const folders = await fs.list_folders(folder_path);
-  return { folders };
+/**
+ * Retrieve folders within a directory.
+ * @param {object} params
+ * @param {object} params.env - Smart environment (unused)
+ * @param {object} params.fs - Smart file system instance
+ * @param {string} [params.folder_path="/"] - Folder to list folders from
+ * @returns {Promise<{folders: string[]}>}
+ */
+async function list_folders({ env, fs, folder_path = '/' }) {
+  const items = await fs.list_folders(folder_path);
+  return { folders: items.map(item => item.path) };
 }
 // exports.list_folders = list_folders; // standard export
 // default function export

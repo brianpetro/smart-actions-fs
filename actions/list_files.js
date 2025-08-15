@@ -20,12 +20,18 @@
  *               type: array
  *               items:
  *                 type: string
+*/
+/**
+ * Retrieve files within a folder.
+ * @param {object} params
+ * @param {object} params.env - Smart environment (unused)
+ * @param {object} params.fs - Smart file system instance
+ * @param {string} [params.folder_path=""] - Folder to list files from
+ * @returns {Promise<{files: string[]}>}
  */
-async function list_files({env, ...params}) {
-  const { folder_path = '' } = params;
-  const fs = params.fs;
-  const files = await fs.list(folder_path);
-  return { files };
+async function list_files({ env, fs, folder_path = '' }) {
+  const items = await fs.list_files(folder_path);
+  return { files: items.map(item => item.path) };
 }
 // exports.list_files = list_files; // standard export
 // default function export
